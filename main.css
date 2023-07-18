@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:wght@700&family=Montserrat:wght@500;700&family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --Dark-cyan: hsl(158, 36%, 37%);
+  --Cream: hsl(30, 38%, 92%);
+  --Dark-blue: hsl(212, 21%, 14%);
+  --Dark-gray: hsl(228, 12%, 48%);
+  --white: hsl(0, 0%, 100%);
+  --paragraph-size: 14px;
+
+}
+body {
+  font-family: 'Montserrat', sans-serif;
+  /* font-family: 'Fraunces', serif; */
+  background-color: var(--Cream);
+  display: grid;
+  place-content: center;
+  min-height: 100vh;
+} 
+/* style prodact start */
+.prodacts {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  max-width: 600px;
+  margin: 1rem;
+}
+img,
+picture {
+  display: block;
+  max-width: 100%;
+}
+img {
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+.prodacts .text-contant {
+  background-color: var(--white);
+  padding: 2rem;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+.prodacts .text-contant p:first-child {
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  font-size: 12px;
+  color: var(--Dark-gray);
+}
+.prodacts .text-contant h1 {
+  font-family: 'Fraunces', serif;
+  font-size: 32px;
+  margin: 20px 0;
+  line-height: 1;
+  color: var(--Dark-blue);
+}
+.prodacts .text-contant p:nth-child(3) {
+  font-size: 14px;
+  color: var(--Dark-gray);
+  line-height: 1.6;
+}
+.prodacts .text-contant .text-prace {
+  display: flex;
+  align-items: center;
+  margin: 20px 0;
+}
+.prodacts .text-prace p:first-child {
+  font-size: 32px;
+  color: var(--Dark-cyan);
+  font-family: 'Fraunces', serif;
+  margin-right: 20px;
+}
+.prodacts .text-prace p:last-child {
+  color: var(--Dark-gray);
+}
+.prodacts .btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+  border: none;
+  border-radius: 8px;
+  color: var(--white);
+  background-color: var(--Dark-cyan);
+  width: 100%;
+  font-weight: 700;
+  text-align: center;
+  cursor: pointer;
+}
+.prodacts .btn::before {
+  content: '';
+  background: url('./images/icon-cart.svg');
+  width: 15px;
+  height: 16px;
+  margin-right: 10px;
+}
+/* Start media prodact */
+@media (max-width: 699px) {
+  .prodacts {
+    grid-template-columns: 1fr;
+  }
+  img {
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 10px;
+  }
+  .prodacts .text-contant {
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 10px;
+  }
+}
+/* End media prodact */
+/* style prodact End */
