@@ -40,7 +40,7 @@ img {
 }
 .prodacts .text-contant {
   background-color: var(--white);
-  padding: 2rem;
+  padding: 2rem 0;
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
 }
@@ -98,9 +98,13 @@ img {
   margin-right: 10px;
 }
 /* Start media prodact */
-@media (max-width: 699px) {
+@media (max-width: 767px) {
+  body {
+    min-height: 0;
+  }
   .prodacts {
     grid-template-columns: 1fr;
+    margin: 0;
   }
   img {
     border-bottom-left-radius: 0;
